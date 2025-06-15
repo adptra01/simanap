@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSUD Abdul Manap - Pelayanan Kesehatan Berkualitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div
+                        class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                        AM
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-blue-800">RSUD Abdul Manap</h1>
+                        <p class="text-xs text-gray-600">Pelayanan Kesehatan Terbaik</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-blue-800 font-medium hover:text-blue-600 transition-all">Beranda</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition-all">Layanan</a>
+                    <a href="#doctors" class="text-gray-600 hover:text-blue-600 transition-all">Jadwal Dokter</a>
+                    <a href="#registration" class="text-gray-600 hover:text-blue-600 transition-all">Pendaftaran
+                        Online</a>
+                    <a href="#sikomedo" class="text-gray-600 hover:text-blue-600 transition-all">SI KOMEDO</a>
+                    <a href="#information" class="text-gray-600 hover:text-blue-600 transition-all">Informasi</a>
+                    <a href="#complaints" class="text-gray-600 hover:text-blue-600 transition-all">Pengaduan</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-blue-800 font-medium">Beranda</a>
+                <a href="#services" class="block py-2 text-gray-600">Layanan</a>
+                <a href="#doctors" class="block py-2 text-gray-600">Jadwal Dokter</a>
+                <a href="#registration" class="block py-2 text-gray-600">Pendaftaran Online</a>
+                <a href="#sikomedo" class="block py-2 text-gray-600">SI KOMEDO</a>
+                <a href="#information" class="block py-2 text-gray-600">Informasi</a>
+                <a href="#complaints" class="block py-2 text-gray-600">Pengaduan</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Selamat Datang di RSUD Abdul Manap</h1>
+            <p class="text-xl md:text-2xl mb-8">Pelayanan Kesehatan Berkualitas untuk Anda dan Keluarga</p>
+            <a href="#registration"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all inline-block">
+                Buat Janji Temu
+            </a>
+        </div>
+    </section>
+
+    <!-- Quick Info Section -->
+    <section class="bg-blue-800 text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center">
+                <div class="flex items-center mx-4 my-2">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    <span>Hotline: (0751) 123456</span>
+                </div>
+                <div class="flex items-center mx-4 my-2">
+                    <i class="fas fa-clock mr-2"></i>
+                    <span>Buka 24 Jam Setiap Hari</span>
+                </div>
+                <div class="flex items-center mx-4 my-2">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>Jl. Prof. Dr. Hamka No.1, Padang</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Fasilitas dan Layanan Kami</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Bed Availability -->
+                <div class="facility-card bg-white rounded-xl shadow-md overflow-hidden p-6 transition-all">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-bed text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Ketersediaan Tempat Tidur</h3>
+                    <p class="text-gray-600 mb-4">Kami menyediakan tempat tidur yang nyaman dengan kapasitas 300 tempat
+                        tidur, termasuk ruang ICU, HCU, dan ruang perawatan standar.</p>
+                    <a href="#" class="text-blue-600 font-medium inline-flex items-center">
+                        Lihat Detail <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Doctor Schedules -->
+                <div class="facility-card bg-white rounded-xl shadow-md overflow-hidden p-6 transition-all">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-user-md text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Jadwal Dokter</h3>
+                    <p class="text-gray-600 mb-4">Akses jadwal praktik dokter spesialis dan umum kami yang selalu
+                        diperbarui untuk memudahkan Anda merencanakan kunjungan.</p>
+                    <a href="#doctors" class="text-blue-600 font-medium inline-flex items-center">
+                        Cek Jadwal <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Online Registration -->
+                <div class="facility-card bg-white rounded-xl shadow-md overflow-hidden p-6 transition-all">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-laptop-medical text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Pendaftaran Online</h3>
+                    <p class="text-gray-600 mb-4">Daftar secara online tanpa perlu antri. Proses cepat dan mudah untuk
+                        pasien baru maupun yang kembali berobat.</p>
+                    <a href="#registration" class="text-blue-600 font-medium inline-flex items-center">
+                        Daftar Sekarang <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- SI KOMEDO -->
+                <div class="facility-card bg-white rounded-xl shadow-md overflow-hidden p-6 transition-all">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-comments text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">SI KOMEDO</h3>
+                    <p class="text-gray-600 mb-4">Sistem Informasi Komunikasi Medis Dokter untuk konsultasi dan
+                        pengaduan pelayanan kami.</p>
+                    <a href="#sikomedo" class="text-blue-600 font-medium inline-flex items-center">
+                        Akses SI KOMEDO <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Information -->
+                <div class="facility-card bg-white rounded-xl shadow-md overflow-hidden p-6 transition-all">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-info-circle text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Informasi Kesehatan</h3>
+                    <p class="text-gray-600 mb-4">Update terbaru tentang kesehatan, program rumah sakit, dan artikel
+                        kesehatan dari dokter spesialis kami.</p>
+                    <a href="#information" class="text-blue-600 font-medium inline-flex items-center">
+                        Baca Informasi <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Complaints -->
+                <div class="facility-card bg-white rounded-xl shadow-md overflow-hidden p-6 transition-all">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-headset text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Layanan Pengaduan</h3>
+                    <p class="text-gray-600 mb-4">Saluran resmi untuk menyampaikan keluhan, masukan, atau apresiasi
+                        terhadap pelayanan kami.</p>
+                    <a href="#complaints" class="text-blue-600 font-medium inline-flex items-center">
+                        Kirim Pengaduan <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Schedule Section -->
+    <section id="doctors" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Jadwal Dokter Spesialis</h2>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-blue-600 text-white">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Hari</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Nama Dokter
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                    Spesialisasi</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Jam Praktik
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                    Ketersediaan</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Senin</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Dr. Ahmad Fauzi, Sp.PD</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Penyakit Dalam</td>
+                                <td class="px-6 py-4 whitespace-nowrap">08:00 - 12:00</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Tersedia</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Selasa</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Dr. Siti Rahma, Sp.OG</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Kebidanan & Kandungan</td>
+                                <td class="px-6 py-4 whitespace-nowrap">13:00 - 17:00</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Tersedia</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Rabu</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Dr. Hendra Saputra, Sp.A</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Anak</td>
+                                <td class="px-6 py-4 whitespace-nowrap">09:00 - 15:00</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Terbatas</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Kamis</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Dr. Rina Amelia, Sp.KK</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Kulit & Kelamin</td>
+                                <td class="px-6 py-4 whitespace-nowrap">10:00 - 14:00</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Tersedia</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Jumat</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Dr. Budi Santoso, Sp.B</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Bedah Umum</td>
+                                <td class="px-6 py-4 whitespace-nowrap">08:00 - 12:00</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Penuh</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="px-6 py-4 bg-gray-50 text-right">
+                    <a href="#" class="text-blue-600 font-medium hover:text-blue-800">Lihat Jadwal Lengkap <i
+                            class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Registration Section -->
+    <section id="registration" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-4">Pendaftaran Online</h2>
+                    <p class="text-gray-600 mb-6">Daftar secara online untuk mendapatkan nomor antrian tanpa perlu
+                        datang lebih awal. Hemat waktu Anda dengan sistem pendaftaran digital kami.</p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Proses pendaftaran hanya membutuhkan 2 menit</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Dapatkan konfirmasi langsung via SMS/WhatsApp</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Pilih dokter dan jam praktik sesuai kebutuhan</p>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-all">
+                        Daftar Sekarang <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 rounded-xl p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Form Pendaftaran Online</h3>
+
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="name">Nama Lengkap</label>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="phone">Nomor HP</label>
+                                <input type="tel" id="phone"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="doctor">Pilih Dokter</label>
+                                <select id="doctor"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>-- Pilih Dokter --</option>
+                                    <option>Dr. Ahmad Fauzi, Sp.PD</option>
+                                    <option>Dr. Siti Rahma, Sp.OG</option>
+                                    <option>Dr. Hendra Saputra, Sp.A</option>
+                                    <option>Dr. Rina Amelia, Sp.KK</option>
+                                    <option>Dr. Budi Santoso, Sp.B</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="date">Tanggal Kunjungan</label>
+                                <input type="date" id="date"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-all">
+                                Kirim Pendaftaran
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SI KOMEDO Section -->
+    <section id="sikomedo" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">SI KOMEDO</h2>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Sistem Informasi Komunikasi Medis Dokter</h3>
+                        <p class="text-gray-600 mb-6">SI KOMEDO adalah platform digital yang memudahkan pasien untuk
+                            berkomunikasi dengan dokter, menyampaikan keluhan, dan mendapatkan informasi medis.</p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-comment-medical text-blue-500"></i>
+                                </div>
+                                <p class="ml-3 text-gray-600">Konsultasi kesehatan secara online</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-file-medical text-blue-500"></i>
+                                </div>
+                                <p class="ml-3 text-gray-600">Akses rekam medis digital</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-calendar-check text-blue-500"></i>
+                                </div>
+                                <p class="ml-3 text-gray-600">Manajemen janji temu dengan dokter</p>
+                            </div>
+                        </div>
+
+                        <a href="#"
+                            class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-all">
+                            Akses SI KOMEDO <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="md:w-1/2 bg-blue-50 flex items-center justify-center p-8">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                            alt="Dokter menggunakan tablet" class="rounded-lg shadow-md max-w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Section -->
+    <section id="information" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Informasi Kesehatan</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Dokter memeriksa pasien" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-blue-600 text-sm mb-2">12 Juni 2023 • Kesehatan Jantung</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Pencegahan Penyakit Jantung di Usia Muda</h3>
+                        <p class="text-gray-600 mb-4">Pola hidup sehat dan deteksi dini dapat mengurangi risiko penyakit
+                            jantung. Simak tips dari spesialis kami.</p>
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Anak-anak bermain" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-blue-600 text-sm mb-2">5 Juni 2023 • Kesehatan Anak</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Imunisasi Lengkap untuk Perlindungan Optimal
+                        </h3>
+                        <p class="text-gray-600 mb-4">Jadwal dan manfaat imunisasi yang perlu diketahui orang tua untuk
+                            menjaga kesehatan buah hati.</p>
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Olahraga di pagi hari" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-blue-600 text-sm mb-2">28 Mei 2023 • Gaya Hidup Sehat</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">5 Olahraga Ringan untuk Kebugaran Harian</h3>
+                        <p class="text-gray-600 mb-4">Aktivitas fisik sederhana yang bisa dilakukan di rumah untuk
+                            menjaga kebugaran tubuh setiap hari.</p>
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#"
+                    class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-8 rounded-full transition-all">
+                    Lihat Semua Artikel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complaints Section -->
+    <section id="complaints" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">Layanan Pengaduan</h2>
+
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-8">
+                <p class="text-gray-600 mb-8">Kami sangat menghargai masukan dari pasien dan keluarga untuk terus
+                    meningkatkan kualitas pelayanan. Silakan sampaikan pengaduan, keluhan, atau apresiasi Anda melalui
+                    form berikut.</p>
+
+                <form>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2" for="complaint-type">Jenis Pengaduan</label>
+                        <select id="complaint-type"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>-- Pilih Jenis Pengaduan --</option>
+                            <option>Pelayanan Medis</option>
+                            <option>Administrasi</option>
+                            <option>Fasilitas</option>
+                            <option>Kebersihan</option>
+                            <option>Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2" for="complaint-detail">Detail Pengaduan</label>
+                        <textarea id="complaint-detail" rows="5"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2" for="name-complaint">Nama Lengkap (Opsional)</label>
+                        <input type="text" id="name-complaint"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2" for="contact-complaint">Kontak (Email/No. HP,
+                            Opsional)</label>
+                        <input type="text" id="contact-complaint"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-all">
+                        Kirim Pengaduan
+                    </button>
+                </form>
+
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h4 class="text-lg font-bold text-gray-800 mb-3">Alternatif Pengaduan</h4>
+                    <div class="flex flex-wrap">
+                        <div class="w-full md:w-1/2 mb-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-blue-600 mr-3"></i>
+                                <div>
+                                    <p class="text-gray-600">Telepon</p>
+                                    <p class="font-medium">(0751) 789012</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 mb-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-blue-600 mr-3"></i>
+                                <div>
+                                    <p class="text-gray-600">Email</p>
+                                    <p class="font-medium">pengaduan@rsabdulmanap.id</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 mb-4">
+                            <div class="flex items-center">
+                                <i class="fab fa-whatsapp text-blue-600 mr-3"></i>
+                                <div>
+                                    <p class="text-gray-600">WhatsApp</p>
+                                    <p class="font-medium">0812 3456 7890</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 mb-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-blue-600 mr-3"></i>
+                                <div>
+                                    <p class="text-gray-600">Langsung ke Kantor</p>
+                                    <p class="font-medium">Bagian Humas RSUD Abdul Manap</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="py-12 bg-red-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">Dalam Keadaan Darurat?</h2>
+            <p class="text-xl mb-6">Segera hubungi Unit Gawat Darurat kami yang siap melayani 24 jam</p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                <div class="flex items-center">
+                    <i class="fas fa-ambulance text-3xl mr-3"></i>
+                    <div>
+                        <p class="text-sm">Ambulans</p>
+                        <p class="text-xl font-bold">(0751) 789123</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-hospital text-3xl mr-3"></i>
+                    <div>
+                        <p class="text-sm">UGD</p>
+                        <p class="text-xl font-bold">(0751) 789124</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Tentang RSUD Abdul Manap</h3>
+                    <p class="text-gray-400 mb-4">Rumah Sakit Umum Daerah Abdul Manap merupakan rumah sakit tipe B yang
+                        memberikan pelayanan kesehatan paripurna dengan standar nasional.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-all">Beranda</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-all">Layanan</a></li>
+                        <li><a href="#doctors" class="text-gray-400 hover:text-white transition-all">Jadwal Dokter</a>
+                        </li>
+                        <li><a href="#registration" class="text-gray-400 hover:text-white transition-all">Pendaftaran
+                                Online</a></li>
+                        <li><a href="#sikomedo" class="text-gray-400 hover:text-white transition-all">SI KOMEDO</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Kontak Kami</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">Jl. Prof. Dr. Hamka No.1, Padang, Sumatera Barat</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">(0751) 123456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">info@rsabdulmanap.id</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">Buka 24 Jam Setiap Hari</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Buletin Kesehatan</h3>
+                    <p class="text-gray-400 mb-4">Dapatkan informasi kesehatan terbaru langsung ke email Anda.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Alamat Email"
+                            class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button type="submit"
+                            class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-all">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>&copy; 2023 RSUD Abdul Manap. Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
